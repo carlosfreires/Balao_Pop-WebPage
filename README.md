@@ -1,22 +1,32 @@
 # 🎈 Balão Pop — Jogo Simples em HTML, CSS e JavaScript
 
+[![Jogue agora](https://img.shields.io/badge/Jogue_Agora-🚀-brightgreen)](https://carlosfreires.github.io/Balao_Pop-WebPage/)
+
 Este repositório contém um mini-jogo em que balões sobem pela tela e o jogador deve estourá-los clicando neles.
 Cada balão estourado aumenta a pontuação exibida no canto superior esquerdo.
 
-O projeto é totalmente feito em HTML + CSS + JavaScript puro, sem bibliotecas externas, em um único arquivo e com menos de 50 linhas de código.
+O projeto é totalmente feito em HTML + CSS + JavaScript puro, sem bibliotecas externas, em um único arquivo (index.html) e com menos de 50 linhas de código.
 
 ## 📌 O Jogo
 
 Balões coloridos aparecem continuamente na tela e sobem até desaparecer.
 Se o usuário clicar em um balão, ele estoura, soma pontos e toca um pequeno som "pop".
 
-📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```bash
 /
-├── Balao_Pop.html   # Arquivo contendo todo o código (HTML, CSS e JS)
+├── index.html       # Arquivo contendo todo o código (HTML, CSS e JS)
 └── README.md        # Documentação do projeto
 ```
+
+## Tecnologias usadas
+
+* **HTML5**
+
+* **CSS3** (animações, gradient)  
+
+* **JavaScript** (DOM, Web Audio API)
 
 ## 🧠 Código linha a linha
 
@@ -291,28 +301,28 @@ cd Balao_Pop-WebPage
 
 Como é apenas um arquivo .html, você pode abrir diretamente no navegador:
 
-* clique duas vezes no arquivo Balao_Pop.html
+* clique duas vezes no arquivo index.html
 
 ou
 
 * abra pelo terminal:
 
-no windows:
+No windows:
 
 ```bash
-start Balao_Pop.html
+start index.html
 ```
 
-no macOS
+No macOS
 
 ```bash
-open Balao_Pop.html 
+open index.html
 ```
 
-no Linux:
+No Linux:
 
 ```bash
-xdg-open Balao_Pop.html
+xdg-open index.html
 ```
 
 Não é necessário servidor local.
@@ -323,7 +333,7 @@ Não é necessário servidor local.
 
 * Suporte a Web Audio API (presente em todos os navegadores atuais).
 
-🤝 Contribuições
+## 🤝 Contribuições
 
 Sinta-se livre para enviar melhorias, animações extras ou novas mecânicas!
 Issues e pull requests são bem-vindos.
