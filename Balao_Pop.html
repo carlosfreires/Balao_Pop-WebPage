@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Balão Pop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{margin:0; overflow:hidden; background:linear-gradient(135deg,#ff9aff,#7afcff,#b28dff); font-family:monospace;}
+        #s{position:fixed;top:10px;left:10px;padding:6px 12px;background:#fff3;border-radius:8px;color:#000;font-size:18px;}
+        .b{position:absolute;width:50px; height:65px; border-radius:50% 50% 45% 45%; cursor:pointer; animation:up 6s linear; display:flex; justify-content:center;}
+        .b::after{content:""; position:absolute; bottom:-40px; width:2px; height:40px; background:#0004; border-radius:2px;}
+        @keyframes up{from{transform:translateY(100vh)}to{transform:translateY(-150px)}}
+    </style>
+</head>
+
+<body>
+    <div id="s">0</div>
+
+    <script>
+        let c = 0, a = new AudioContext();
+        function popSound(){
+            let o = a.createOscillator(), g = a.createGain();
+            o.connect(g); g.connect(a.destination);
+            o.frequency.value = 600;
+            g.gain.setValueAtTime(.3, a.currentTime);
+            o.start(); o.stop(a.currentTime + .1);
+        }
+        function newB(){
+            let b = document.createElement("div");
+            b.className = "b";
+            b.style.left = Math.random() * (innerWidth - 60) + "px";
+            b.style.background = `hsl(${Math.random()*360} 80% 70% / .85)`;
+            b.onclick = () => {
+                c++;
+                s.textContent = c;
+                popSound();
+                b.remove();
+            };
+            document.body.appendChild(b);
+            setTimeout(() => b.remove(), 6500);
+        }
+        setInterval(newB, 650);
+    </script>
+</body>
+
+</html>
